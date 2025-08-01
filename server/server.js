@@ -7,7 +7,18 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin:
+      process.env.NODE_ENV === "production"
+        ? [
+            "https://your-app-name.vercel.app",
+            "https://your-app-name.vercel.app:443",
+            "https://vi-ijuv.onrender.com",
+            "https://vi-ijuv.onrender.com:443",
+            // Add your Vercel domain here after deployment
+            // "https://your-app.vercel.app",
+            // "https://your-app.vercel.app:443",
+          ]
+        : "http://localhost:3000",
     methods: ["GET", "POST"],
   },
 });

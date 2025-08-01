@@ -33,7 +33,12 @@ const VideoCall = ({ roomId, userName, onLeaveRoom }) => {
 
   useEffect(() => {
     // Initialize Socket.IO connection
-    const newSocket = io("http://localhost:5000");
+    const backendUrl =
+      process.env.REACT_APP_BACKEND_URL ||
+      (process.env.NODE_ENV === "production"
+        ? "https://vi-ijuv.onrender.com"
+        : "http://localhost:5000");
+    const newSocket = io(backendUrl);
     setSocket(newSocket);
 
     // Initialize WebRTC

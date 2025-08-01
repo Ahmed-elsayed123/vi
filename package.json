@@ -10,10 +10,15 @@
     "install-all": "npm install && cd server && npm install && cd ../client && npm install",
     "build": "cd client && npm run build"
   },
-  "keywords": ["video-calling", "webrtc", "socket.io", "react"],
+  "keywords": [
+    "video-calling",
+    "webrtc",
+    "socket.io",
+    "react"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^8.2.2"
   }
-} 
+}
