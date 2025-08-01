@@ -10,6 +10,8 @@ const io = socketIo(server, {
     origin:
       process.env.NODE_ENV === "production"
         ? [
+            "https://vi-c9vtshqik-ahmed-elsayeds-projects-1fd4a803.vercel.app",
+            "https://vi-c9vtshqik-ahmed-elsayeds-projects-1fd4a803.vercel.app:443",
             "https://vi-three-eosin.vercel.app",
             "https://vi-three-eosin.vercel.app:443",
             "https://vi-ijuv.onrender.com",
