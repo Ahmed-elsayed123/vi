@@ -10,8 +10,8 @@ const io = socketIo(server, {
     origin:
       process.env.NODE_ENV === "production"
         ? [
-            "https://your-app-name.vercel.app",
-            "https://your-app-name.vercel.app:443",
+            "https://vi-three-eosin.vercel.app/",
+            "https://vi-three-eosin.vercel.app/:443",
             "https://vi-ijuv.onrender.com",
             "https://vi-ijuv.onrender.com:443",
             // Add your Vercel domain here after deployment
